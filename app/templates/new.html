@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/biostats/new" method="POST">
+    <div class="row">
+        <div class="col">
+            <label for="biostats_1">Name</label>
+            <input id="biostats_1" type="text" class="form-control" placeholder="Name" name="biostats_1">
+        </div>
+        <div class="col">
+            <label for="Column_2">Sex</label>
+            <input id="Column_2" type="text" class="form-control" placeholder="Sex"
+                   name="Column_2">
+        </div>
+        <div class="col">
+            <label for="Column_3">Age</label>
+            <input id="Column_3" type="text" class="form-control" placeholder="Age" name="Column_3">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <label for="Column_4">Height (Inches)</label>
+            <input id="Column_4" type="text" class="form-control" placeholder="Height" name="Column_4">
+        </div>
+        <div class="col">
+            <label for="Column_5">Weight (Pounds)</label>
+            <input id="Column_5" type="text" class="form-control" placeholder="Weight" name="Column_5">
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-success">Save</button>
+
+</form>
+
+{% endblock %}

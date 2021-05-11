@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
+<canvas id="myChart" width="400" height="400"></canvas>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Alex','Bert','Carl','Dave','Elly','Fran','Gwen','Hank','Ivan','Jake','Kate','Luke','Myra','Neil','Omar','Page','Quin', 'Ruth'],
+        datasets: [{
+            label: 'Biostats Heights in Inches',
+            data: [74,68,70,72,66,66,64,71,72,69,69,72,62,75,70,67,71,65],
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Sex</th>
+        <th scope="col">Age</th>
+        <th scope="col">Height</th>
+        <th scope="col">Weight</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for data in biostats %}
+    <tr>
+        <td><a href="view/{{data.id}}">{{ data.biostats_1 }}</a></td>
+        <td>{{ data.Column_2 }}</td>
+        <td>{{ data.Column_3 }}</td>
+        <td>{{ data.Column_4 }}</td>
+        <td>{{ data.Column_5 }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
